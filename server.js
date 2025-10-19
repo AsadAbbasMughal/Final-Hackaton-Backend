@@ -74,6 +74,10 @@ app.use("/api/patients", patientRoutes);
 app.use("/api/reports", reportsRoutes);
 app.use("/api/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("API is running...");
+})
+
 // ✅ ⚠️ Important for Vercel:
 // DON'T use app.listen()
 // Instead, export the app
